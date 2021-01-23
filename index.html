@@ -29,17 +29,21 @@
 
 
     <!--Hero start-->
-    <section>
-        <h1>Cusine Time</h1>
+    <section class="w3-card">
+        <div class="hero"></div>
     </section>
     <!--Hero end-->
 
     <!--Content start-->
     <main>
-        <div>
+      <!--Google Maps-->
+      <div id="map"></div>
+      <button id="showMe" class="btn">Use My Location</button>
+      <div></div>
+        <div class="w3-container w3-teal w3-round-xxlarge">
+          <form>
             <label for="cusine">Enter City:</label>
             <input type="text" id="cusine" name="cusine">
-
             <select>
                 <option>Mexican</option>
                 <option>Chinese</option>
@@ -47,27 +51,28 @@
                 <option>Thai</option>
                 <option>Indian</option>
                 <option>Canadian</option>
-
             </select>
+          </form>
         </div>
 
         <div class="w3-row-padding" id="gallery">
             <div class="w3-center w3-padding-64">
               <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
             </div>
-        
     </main>
     <!--Content end-->
 
 
-    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <footer class="w3-container w3-padding-32 w3-margin-0 w3-dark-grey w3-center">
+      <div class="w3-col s5">
         <h4>Contact</h4>
         <address>
             255 Ocean Drive, CA<br>
             555-255-8970<br>
-            <a href="mailto:webmaster@example.com">cusinetime@foodies.org</a>.<br>
+            <a href="mailto:webmaster@example.com">cuisinetime@foodies.org</a>.<br>
         </address>
-        <div class="w3-xlarge w3-section">
+      </div>
+        <div class="w3-xlarge w3-section w3-col w3-display-left">
           <i class="fa fa-facebook-official w3-hover-opacity"></i>
           <i class="fa fa-instagram w3-hover-opacity"></i>
           <i class="fa fa-snapchat w3-hover-opacity"></i>
