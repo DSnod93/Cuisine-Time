@@ -82,36 +82,4 @@ function getData_City(coordinates){
 
 detectCurrentLocation();
 
-function displayRestaurants(){
-    var searchBtnEl = document.getElementById("search-btn");
-    var userInput_searchFoodEl = document.getElementById("searchFood");
-    searchBtnEl.addEventListener("click", function(){
-        getData_Restaurants(cityId, userInput_searchFoodEl.value);
-        userInput_searchFoodEl.value = '';
-    })
 
-    function getData_Restaurants(cityId, userInput_searchFood){
-        var apiUrl = 'https://developers.zomato.com/api/v2.1/search?entity_id=' +cityId +'&entity_type=city&q=' +userInput_searchFood;
-        fetch(apiUrl, {method: "GET", 
-        headers: {
-            "user-key": zomato_api_key
-        }})
-        .then(function(response){
-            console.log(response);
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-            //let restaurantslist = data.restaurants;
-            for (var i=0; i<data.restaurants.length; i++){
-                console.log(data.restaurants[i].restaurant.name);
-                console.log(data.restaurants[i].restaurant.user_rating.aggregate_rating);
-                console.log(data.restaurants[i].restaurant.establishment[0]);
-                console.log(data.restaurants[i].restaurant.location.address);
-            }
-        });
-    };
-}
-
-
-displayRestaurants();
