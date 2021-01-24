@@ -9,4 +9,20 @@
       height: 300px;
       background-image: url(../images/cuisine.jpg);
       background-size: cover;
+      padding: 0;
+      margin: 0;
+  }
+
+  
+
+  div.w3-col.s2.w3-codespan {
+      width: 100;
+      padding: 2px;
+  }
+
+  button.searchBtn {
+    width: 100%;
+    padding: 0;
+    color: white;
+    background-color: red;
   }

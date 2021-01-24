@@ -13,33 +13,50 @@
 <body>
 
   <!--Nav start-->
-  <div>
-    <div class="w3-row w3-large w3-dark-grey">
-      <div class="w3-col s4">
-        <a href="#" class="w3-button w3-block">Home</a>
+  <div class="w3-bar w3-padding-16 w3-dark-grey">
+    <span class="w3-center">
+      <div class="w3-col s4 w3-mobile">
+        <a href="#" class="w3-button w3-block w3-hover-red">Home</a>
       </div>
-      <div class="w3-col s4">
-        <a href="#menu" class="w3-button w3-block">Menu</a>
+      <div class="w3-col s4 w3-mobile">
+        <a href="#menu" class="w3-button w3-block w3-hover-red">Menu</a>
       </div>
-      <div class="w3-col s4">
-        <a href="#contact" class="w3-button w3-block">Contact</a>
+      <div class="w3-col s4 w3-mobile">
+        <a href="#contact" class="w3-button w3-block w3-hover-red">Contact</a>
       </div>
-    </div>
+    </span>
   </div>
   <!--Nav end-->
 
 
   <!--Hero start-->
-  <section class="w3-card">
+  <section>
     <div class="hero"></div>
   </section>
   <!--Hero end-->
 
+  <!--Menu items-->
+  <section class="section w3-container w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-row w3-row-padding">
+      <div class="w3-col s5 w3-mobile">
+        <input class="w3-input " value="" placeholder="Enter city">
+      </div>
+      <div class="w3-col s5 w3-mobile">
+        <input class="w3-input" value="" placeholder="Search for a cuisine"/>
+      </div>
+      <div class="w3-col s2 w3-codespan">
+      <button type="submit" class="searchBtn" onclick="">Go</button>
+      </div>
+    </div>
+  </section>
+
   <!--Content start-->
   <main>
     <!--Google Maps-->
-    <div id="map"></div>
-    <button id="showMe" class="btn">Use My Location</button>
+    <div id="map">
+    </div>
+    <button id="find-me" class="btn">Use My Location <i class="fas fa-street-view"></i></button>
+    <!-- if user wants to manually input and select
     <div></div>
     <div class="w3-container w3-teal w3-round-xxlarge">
       <form>
@@ -52,10 +69,11 @@
           <option>Thai</option>
           <option>Indian</option>
           <option>Canadian</option>
+          <option>American</option>
         </select>
       </form>
     </div>
-
+  -->
     <div class="w3-row-padding" id="gallery">
       <div class="w3-center w3-padding-64">
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
@@ -64,8 +82,8 @@
   <!--Content end-->
 
 
-  <footer class="w3-container w3-padding-25 w3-margin-0 w3-dark-grey w3-center">
-    <div class="w3-col s5 w3 w3-display-bottomleft">
+  <footer class="w3-container w3-padding-30 w3-dark-grey">
+    <div class="w3-col s5 w3 w3-mobile w3-left">
       <h4>Contact</h4>
       <address>
         255 Ocean Drive, CA<br>
@@ -73,13 +91,18 @@
         <a href="mailto:webmaster@example.com">cuisinetime@foodies.org</a>.<br>
       </address>
     </div>
-    <div class="w3-xlarge w3-section w3-col s12 w3-display-bottom">
+    <div class="w3-xlarge w3-center w3-col s12">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
       <i class="fa fa-snapchat w3-hover-opacity"></i>
       <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     </div>
   </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
 
 </body>
 
