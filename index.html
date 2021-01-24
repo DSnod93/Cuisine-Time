@@ -40,8 +40,17 @@
     <!--Google Maps-->
     <div id="map"></div>
       <!-- Detect current location -->
-    <button id="find-me" class="btn">Use My Location</button>
-    <div></div>
+    <!-- <button  class="btn" onclick="getLocation()">Use My Location</button> -->
+    <div>
+<!-- temporary html elements created to test the detectcurrentlocation function and cuisinesearch-->
+      <h1>Finding Me</h1>
+      <button id="find-me">Where am I?</button>
+      <input type="text" id="cityName" placeholder="City name">
+      <input type="text" id="searchFood" placeholder="Search for your fav cuisine or a dish">
+      <button class="btn btn-primary" type="button" id="search-btn">
+        <i class="fas fa-search"></i>
+      <p id="location"></p>
+    </div>
     <div class="w3-container w3-teal w3-round-xxlarge">
       <form>
         <label for="cusine">Enter City:</label>
@@ -62,8 +71,6 @@
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
       </div>
 
-
-    
 
   </main>
   <!--Content end-->
