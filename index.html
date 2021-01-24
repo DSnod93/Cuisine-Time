@@ -38,20 +38,32 @@
   <!--Content start-->
   <main>
     <!--Google Maps-->
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
       <!-- Detect current location -->
     <!-- <button  class="btn" onclick="getLocation()">Use My Location</button> -->
-    <div>
-<!-- temporary html elements created to test the detectcurrentlocation function and cuisinesearch-->
+
+    <!-- temporary html elements created to test the detectcurrentlocation function and cuisinesearch-->
+    <div class="w3-container">
       <h1>Finding Me</h1>
       <button id="find-me">Where am I?</button>
       <input type="text" id="cityName" placeholder="City name">
       <input type="text" id="searchFood" placeholder="Search for your fav cuisine or a dish">
       <button class="btn btn-primary" type="button" id="search-btn">
         <i class="fas fa-search"></i>
-      <p id="location"></p>
+        </button>
     </div>
-    <div class="w3-container w3-teal w3-round-xxlarge">
+      <!-- <p id="location"></p> -->
+
+
+    <!-- display restaurants -->
+    <div class= "w3-container" id ="restaurants-container"></div>
+ 
+      </div>
+        <!--  maps  -->
+        <div class= "w3-container" id ="maps-container"></div>
+    </div>
+
+    <!-- <div class="w3-container w3-teal w3-round-xxlarge">
       <form>
         <label for="cusine">Enter City:</label>
         <input type="text" id="cusine" name="cusine">
@@ -64,18 +76,18 @@
           <option>Canadian</option>
         </select>
       </form>
-    </div>
+    </div> -->
 
-    <div class="w3-row-padding" id="gallery">
+    <!-- <div class="w3-row-padding" id="gallery">
       <div class="w3-center w3-padding-64">
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
-      </div>
+      </div> -->
 
 
   </main>
   <!--Content end-->
 
-
+<!-- 
   <footer class="w3-container w3-padding-25 w3-margin-0 w3-dark-grey w3-center">
     <div class="w3-col s5 w3 w3-display-bottomleft">
       <h4>Contact</h4>
@@ -91,7 +103,7 @@
       <i class="fa fa-snapchat w3-hover-opacity"></i>
       <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     </div>
-  </footer>
+  </footer> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
