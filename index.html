@@ -19,7 +19,7 @@
         <a href="#" class="w3-button w3-block w3-hover-red">Home</a>
       </div>
       <div class="w3-col s4 w3-mobile">
-        <a href="#menu" class="w3-button w3-block w3-hover-red">Menu</a>
+        <a href="#cuisine-type" class="w3-button w3-block w3-hover-red">Cuisine Type</a>
       </div>
       <div class="w3-col s4 w3-mobile">
         <a href="#contact" class="w3-button w3-block w3-hover-red">Contact</a>
@@ -35,29 +35,22 @@
   </section>
   <!--Hero end-->
 
-  <!--Menu items-->
+  <!--User input for city and cuisine along with button-->
   <section class="section w3-container w3-center w3-dark-grey w3-padding-16">
     <div class="w3-row w3-row-padding">
       <div class="w3-col s5 w3-mobile">
         <input class="w3-input " value="" placeholder="Enter city">
       </div>
       <div class="w3-col s5 w3-mobile">
-        <input class="w3-input" value="" placeholder="Search for a cuisine"/>
+        <input class="w3-input" value="" placeholder="Search for a cuisine" />
       </div>
       <div class="w3-col s2 w3-codespan">
-      <button type="submit" class="searchBtn" onclick="">Go</button>
+        <button type="submit" class="searchBtn" onclick="">Go</button>
       </div>
     </div>
   </section>
 
-  <!--Content start-->
-  <main>
-    <!--Google Maps-->
-    <div id="map">
-    </div>
-    <button id="find-me" class="btn">Use My Location <i class="fas fa-street-view"></i></button>
-    <!-- if user wants to manually input and select
-    <div></div>
+  <!-- if user wants to manually input and select
     <div class="w3-container w3-teal w3-round-xxlarge">
       <form>
         <label for="cusine">Enter City:</label>
@@ -74,35 +67,92 @@
       </form>
     </div>
   -->
-    <div class="w3-row-padding" id="gallery">
+
+  <!--Content start-->
+  <main>
+
+    <button id="find-me" class="btn">Use My Location <i class="fas fa-street-view"></i></button>
+
+    <!-- display restaurants -->
+    <div class="w3-container" id="restaurants-container"></div>
+
+    </div>
+    <!--  maps  -->
+    <div class="w3-container" id="maps-container"></div>
+
+    <!--Gallery start-->
+    <div class="w3-row-padding" id="cuisine-type-gallery">
       <div class="w3-center w3-padding-64">
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
       </div>
-  </main>
-  <!--Content end-->
-
-
-  <footer class="w3-container w3-padding-30 w3-dark-grey">
-    <div class="w3-col s5 w3 w3-mobile w3-left">
-      <h4>Contact</h4>
-      <address>
-        255 Ocean Drive, CA<br>
-        555-255-8970<br>
-        <a href="mailto:webmaster@example.com">cuisinetime@foodies.org</a>.<br>
-      </address>
+      <!--Cusine types-->
+      <div class="w3-row w3-row-padding w3-margin" id="cuisine-gallery">
+        <div class="w3-col w3-display-container w3-third" id="mexican-cuisine" style="padding: 0.1em;">
+          <img src="./assets/images/mexican-cuisine.jpg" style="width: 100%;">
+          <span class="w3-tag w3-display-topleft">
+            <button><i class="fas fa-heart"></i></button>
+          </span>
+        </div>
+        <div class="w3-col w3-display-container w3-third" id="chinese-cuisine">
+          <img src="./assets/images/chinese-cuisine.jpg" style="width: 100%; padding: 0.1em;">
+          <span class="w3-tag w3-display-topleft">
+            <button><i class="fas fa-heart"></i></button>
+          </span>
+        </div>
+        <div class="w3-col w3-display-container w3-third" id="italian-cuisine">
+          <img src="./assets/images/italian-cuisine.jpg" style="width: 100%;">
+          <span class="w3-tag w3-display-topleft">
+            <button><i class="fas fa-heart"></i></button>
+          </span>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col s4 w3-display-container w3-third" id="indian-cuisine">
+            <img src="./assets/images/indian-cuisine.jpg" style="width: 100%;">
+            <span class="w3-tag w3-display-topleft" style="left: 0;">
+              <button><i class="fas fa-heart"></i></button>
+            </span>
+          </div>
+          <div class="w3-col s4 w3-display-container w3-third" id="mediterranean-cuisine">
+            <img src="./assets/images/mediterranean-cuisine.jpg" style="width: 100%;">
+            <span class="w3-tag w3-display-topleft" style="left: 0;">
+              <button><i class="fas fa-heart"></i></button>
+            </span>
+          </div>
+          <div class="w3-col s4 w3-display-container w3-third" id="american-cuisine">
+            <img src="./assets/images/american-cuisine.jpg" style="width: 100%;">
+            <span class="w3-tag w3-display-topleft" style="left: 0;">
+              <button><i class="fas fa-heart"></i></button>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="w3-xlarge w3-center w3-col s12">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    </div>
-  </footer>
+    <!--Gallery end-->
+
+    <!--Content end-->
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-    crossorigin="anonymous"></script>
+    <footer class="w3-container w3-padding-30 w3-dark-grey">
+      <div class="w3-col s5 w3 w3-mobile w3-left">
+        <h4>Contact</h4>
+        <address>
+          255 Ocean Drive, CA<br>
+          555-255-8970<br>
+          <a href="mailto:webmaster@example.com">cuisinetime@foodies.org</a>.<br>
+        </address>
+      </div>
+      <div class="w3-xlarge w3-center w3-col s12">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"></script>
 
 </body>
 

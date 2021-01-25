@@ -26,3 +26,62 @@
     color: white;
     background-color: red;
   }
+
+
+  .w3-display-topleft {
+      top: 0;
+      left: 8px;
+      position: absolute;
+  }
+
+  .w3-tag {
+      padding-left: 0px;
+      padding-right: 0px;
+      background-color: black;
+  }
+
+  .fa-heart {
+      font-size: 22px;
+  }
+
+  .fa-heart:hover {
+      color: red;
+  }
+
+
+  /*#mexican-cuisine {
+      height: 200px;
+      background-image: url(../images/mexican-cuisine.jpg);
+      background-size: cover;
+  }
+
+  #chinese-cuisine {
+      height: 200px;
+      background-image: url(../images/chinese-cuisine.jpg);
+      background-size: cover;
+  }
+
+  #italian-cuisine {
+      height: 200px;
+      background-image: url(../images/italian-cuisine.jpg);
+      background-size: cover;
+  }
+
+  #indian-cuisine {
+      height: 200px;
+      background-image: url(../images/indian-cuisine.jpg);
+      background-size: cover;
+  }
+
+  #mediterranean-cuisine {
+    height: 200px;
+    background-image: url(../images/mediterranean-cuisine.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+
+  #american-cuisine {
+    height: 200px;
+    background-image: url(../images/american-cuisine.jpg);
+    background-size: cover;
+}*/
