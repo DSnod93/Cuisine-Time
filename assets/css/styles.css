@@ -48,6 +48,26 @@
       color: red;
   }
 
+  .w3-container.restaurants {
+      width: 40%;
+  }
+
+  .w3-container.maps {
+    width: 60%;
+}
+
+    button#find-me.btn {
+    float: right;
+    position: relative;
+    top: -38px;
+    left: -1px;
+    padding: 5px;
+    border: solid  red;
+    margin: 0;
+}
+
+
+
 
   /*#mexican-cuisine {
       height: 200px;
