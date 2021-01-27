@@ -48,6 +48,15 @@
       color: red;
   }
 
+.w3-container.restaurants{
+    width: 40%;
+}
+
+.w3-container.maps{
+    width: 60%;
+    background-color: blue;
+}
+
 
   /*#mexican-cuisine {
       height: 200px;
