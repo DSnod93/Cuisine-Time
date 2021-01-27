@@ -172,13 +172,30 @@ function displayrestaurantsList(data){
         const restRating_text = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.user_rating.rating_text);
         const restEstablisment = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.establishment[0]);
         const restAddress = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.address);
-        card.append(cardheader_restName, restRating, restRating_text, restEstablisment,restAddress);
+
+        // LatLng corodinates to be used for google maps-options
+        const lat = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.latitude);
+        const lng = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.longitude);
+        console.log("Latitude:" +lng.text());
+        console.log("Longitude:" +lng.text());
+
+        // button to load maps upon click
+        var $buttonDir = $('<button/>', {type: 'button','class': 'dynBtn',id: 'button-directions',text: 'Directions', 
+            click: function() {
+                $("#buttonDir").attr("data-lng", lat.text());
+                $("#buttonDir").attr("data-lng", lng.text());
+                window.alert('Map is loaded');
+            }
+          });
+        card.append(cardheader_restName, restRating, restRating_text, restEstablisment,restAddress,$buttonDir);
         $("#restaurants-container").append(card);
      }
 }
 
 detectCurrentLocation();
 searchRestaurants();
+
+
 //  ------------------------------------ Workflow -2 -----------------------------------------
 // function getLocation()
 // {
@@ -319,4 +336,6 @@ searchRestaurants();
 //     return newCuisineType;
 
 // }
+
+
 
