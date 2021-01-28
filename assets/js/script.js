@@ -5,9 +5,8 @@ Get the city id from the zomato cities API using lat and long values
 Store city id in a variable
 Get the cuisine Type from the user
 Store it in a variable
-Now we have cusineType and city id
-Get the restaurants lists from the zomato search api with the following inputs in the url : apikey, entity_id (city_id), entity_type( city), cuisineid
-display name, location-address, user_rating- aggregate_rating( rating_text), photos_url from the response
+Get the restaurants lists from the zomato search api with the following inputs in the url : apikey, entity_id (city_id), entity_type( city), query search
+display name, location-address, user_rating- aggregate_rating( rating_text) sorted by rating in descding order from the response
 */
 
 // GLobal Variables
@@ -18,7 +17,6 @@ var coordinates = [];
 var cityNameEl = document.getElementById("cityName");
 var cityId;
 var cityName;
-var cuisineId;
 var cityName_userinput;
 var locationBtn = document.getElementById("find-me");
 var options = {
@@ -79,7 +77,6 @@ function detectCurrentLocation(){
             cityId = data.location_suggestions[0].id;
         });
     };
-
 }
 
 function searchRestaurants(){
@@ -97,7 +94,7 @@ function searchRestaurants(){
 };
 
 function getData_Restaurants(cityId, userInput_searchFood){
-        var apiUrl = 'https://developers.zomato.com/api/v2.1/search?entity_id=' +cityId +'&entity_type=city&q=' +userInput_searchFood;
+    var apiUrl    = 'https://developers.zomato.com/api/v2.1/search?entity_id=' +cityId +'&entity_type=city&cuisines=' +userInput_searchFood +'&sort=rating&order=desc';
         fetch(apiUrl, {method: "GET", 
         headers: {
             "user-key": zomato_api_key
