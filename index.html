@@ -13,7 +13,7 @@
 <body>
 
   <!--Nav start-->
-  <div class="w3-bar w3-padding-16 w3-dark-grey">
+  <div class="w3-bar w3-mobile w3-padding-16 w3-dark-grey">
     <span class="w3-center">
       <div class="w3-col s4 w3-mobile">
         <a href="#" class="w3-button w3-block w3-hover-red">Home</a>
@@ -31,10 +31,11 @@
 
   <!--Hero start-->
   <section>
-    <div class="hero"></div>
+    <div class="hero">
+    </div>
   </section>
   <!--Hero end-->
-
+  <!-- archana: added id's for city,cuisine and searchbtn -->
   <!--User input for city and cuisine along with button-->
   <section class="section w3-container w3-center w3-dark-grey w3-padding-16">
     <div class="w3-row w3-row-padding">
@@ -72,8 +73,8 @@
   <!--Content start-->
   <main>
 
-    
 
+    <!-- archana: added class name to restaurants container and maps container -->
     <!-- display restaurants -->
     <div class="w3-container restaurants" id="restaurants-container"></div>
 
@@ -157,6 +158,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
       crossorigin="anonymous"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <!-- <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEzBEuaOLJJZAyG4HvMvXCkRghvR0AMbU&callback=initMap&libraries=&v=weekly"
+        defer
+      ></script> -->
+    <script src = "./assets/js/script.js"></script>
 
 </body>
 
