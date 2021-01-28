@@ -5,6 +5,14 @@ Get the city id from the zomato cities API using lat and long values
 Store city id in a variable
 Get the cuisine Type from the user
 Store it in a variable
+Get a list of all cuisines of restaurants listed in the city.
+Confirm the user's fav cuisineType is in the list of cuisines
+if so, get the cuisine id from the zomato cusines API
+Store it in a variable
+Now we have cusineid and city id
+Get the restaurants lists from the zomato search api with the following inputs in the url : apikey, entity_id (city_id), entity_type( city), cuisineid
+display name, location-address, user_rating- aggregate_rating( rating_text), photos_url from the response
+
 Now we have cusineType and city id
 Get the restaurants lists from the zomato search api with the following inputs in the url : apikey, entity_id (city_id), entity_type( city), cuisineid
 display name, location-address, user_rating- aggregate_rating( rating_text), photos_url from the response
@@ -15,6 +23,48 @@ display name, location-address, user_rating- aggregate_rating( rating_text), pho
 const zomato_api_key = "5bb1aedf9a190120f2dd61a33a8368b1";
 const maps_api_key = "AIzaSyDEzBEuaOLJJZAyG4HvMvXCkRghvR0AMbU";
 var coordinates = [];
+
+$(document).ready(function(){
+    init();
+
+function init(){
+    // detect current location
+    findMe(); 
+}
+
+
+function findMe(){
+    $("#find-me").click(function(){
+        console.log("button clicked");
+        if(navigator.geolocation)
+            navigator.geolocation.getCurrentPosition(function(position){
+                console.log(position);
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+                coordinates.push(lat);
+                coordinates.push(lng);
+                //console.log(coordinates); 
+                return coordinates;
+    });
+    else    
+        console.log("geolocation is not supported");      
+    });
+};
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
 var cityNameEl = document.getElementById("cityName");
 var cityId;
 var cityName;
@@ -122,30 +172,13 @@ function displayrestaurantsList(data){
         const restRating_text = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.user_rating.rating_text);
         const restEstablisment = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.establishment[0]);
         const restAddress = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.address);
-
-        // LatLng corodinates to be used for google maps-options
-        const lat = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.latitude);
-        const lng = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.longitude);
-        console.log("Latitude:" +lng.text());
-        console.log("Longitude:" +lng.text());
-
-        // button to load maps upon click
-        var $buttonDir = $('<button/>', {type: 'button','class': 'dynBtn',id: 'button-directions',text: 'Directions', 
-            click: function() {
-                $("#buttonDir").attr("data-lng", lat.text());
-                $("#buttonDir").attr("data-lng", lng.text());
-                window.alert('Map is loaded');
-            }
-          });
-        card.append(cardheader_restName, restRating, restRating_text, restEstablisment,restAddress,$buttonDir);
+        card.append(cardheader_restName, restRating, restRating_text, restEstablisment,restAddress);
         $("#restaurants-container").append(card);
      }
 }
 
 detectCurrentLocation();
 searchRestaurants();
-
-
 //  ------------------------------------ Workflow -2 -----------------------------------------
 // function getLocation()
 // {
@@ -286,6 +319,4 @@ searchRestaurants();
 //     return newCuisineType;
 
 // }
-
-
 
