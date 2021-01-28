@@ -4,6 +4,19 @@
     box-sizing: border-box;
   }
 
+  
+  footer {
+    width: 100%;
+    padding: 40px 35px;
+}
+
+footer div {
+    line-height: 2;
+}
+
+footer a:hover {
+    color: red;
+}
 
   .hero {
       height: 300px;
@@ -13,12 +26,15 @@
       margin: 0;
   }
 
+
+  
   
 
   div.w3-col.s2.w3-codespan {
       width: 100;
       padding: 2px;
   }
+  
 
   button.searchBtn {
     width: 100%;
@@ -40,6 +56,7 @@
       background-color: black;
   }
 
+  /*heart icon for images start*/
   .fa-heart {
       font-size: 22px;
   }
@@ -47,6 +64,34 @@
   .fa-heart:hover {
       color: red;
   }
+  /*heart icon for images end*/
+
+
+  /*containers for restaurants and maps*/
+  .w3-container.restaurants {
+      width: 40%;
+  }
+
+  .w3-container.maps {
+    width: 60%;
+}
+  /*containers for restaurants and maps end*/
+
+
+    button#find-me.btn {
+    float: right;
+    position: relative;
+    top: -38px;
+    left: -1px;
+    padding: 5px;
+    border: solid  red;
+    margin: 0 auto;
+}
+
+
+
+
+
 
   /* archana: added styling to restaurant container */
 .w3-container.restaurants{

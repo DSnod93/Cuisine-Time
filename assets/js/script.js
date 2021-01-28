@@ -12,7 +12,6 @@ display name, location-address, user_rating- aggregate_rating( rating_text) sort
 // GLobal Variables
 // API Keys
 const zomato_api_key = "5bb1aedf9a190120f2dd61a33a8368b1";
-const maps_api_key = "AIzaSyDEzBEuaOLJJZAyG4HvMvXCkRghvR0AMbU";
 var coordinates = [];
 var cityNameEl = document.getElementById("cityName");
 var cityId;
@@ -24,6 +23,33 @@ var options = {
     timeout: 10000,
     maximumAge: 0
 };
+
+// $(document).ready(function(){
+//     init();
+
+// function init(){
+//     // detect current location
+//     findMe(); 
+// }
+
+// function findMe(){
+//     $("#find-me").click(function(){
+//         console.log("button clicked");
+//         if(navigator.geolocation)
+//             navigator.geolocation.getCurrentPosition(function(position){
+//                 console.log(position);
+//                 var lat = position.coords.latitude;
+//                 var lng = position.coords.longitude;
+//                 coordinates.push(lat);
+//                 coordinates.push(lng);
+//                 //console.log(coordinates); 
+//                 return coordinates;
+//     });
+//     else    
+//         console.log("geolocation is not supported");      
+//     });
+// };
+// });
 
 // -------------------------------------------- Workflow -1 -------------------------------------------------
 function detectCurrentLocation(){
@@ -119,30 +145,13 @@ function displayrestaurantsList(data){
         const restRating_text = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.user_rating.rating_text);
         const restEstablisment = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.establishment[0]);
         const restAddress = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.address);
-
-        // LatLng corodinates to be used for google maps-options
-        const lat = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.latitude);
-        const lng = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.longitude);
-        console.log("Latitude:" +lng.text());
-        console.log("Longitude:" +lng.text());
-
-        // button to load maps upon click
-        var $buttonDir = $('<button/>', {type: 'button','class': 'dynBtn',id: 'button-directions',text: 'Directions', 
-            click: function() {
-                $("#buttonDir").attr("data-lng", lat.text());
-                $("#buttonDir").attr("data-lng", lng.text());
-                window.alert('Map is loaded');
-            }
-          });
-        card.append(cardheader_restName, restRating, restRating_text, restEstablisment,restAddress,$buttonDir);
+        card.append(cardheader_restName, restRating, restRating_text, restEstablisment,restAddress);
         $("#restaurants-container").append(card);
      }
 }
 
 detectCurrentLocation();
 searchRestaurants();
-
-
 //  ------------------------------------ Workflow -2 -----------------------------------------
 // function getLocation()
 // {
@@ -283,6 +292,4 @@ searchRestaurants();
 //     return newCuisineType;
 
 // }
-
-
 
