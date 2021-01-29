@@ -120,7 +120,7 @@ function searchRestaurants(){
 };
 
 function getData_Restaurants(cityId, userInput_searchFood){
-    var apiUrl    = 'https://developers.zomato.com/api/v2.1/search?entity_id=' +cityId +'&entity_type=city&cuisines=' +userInput_searchFood +'&sort=rating&order=desc';
+    var apiUrl = 'https://developers.zomato.com/api/v2.1/search?entity_id=' +cityId +'&entity_type=city&q=' +userInput_searchFood +'&sort=rating&order=desc';
         fetch(apiUrl, {method: "GET", 
         headers: {
             "user-key": zomato_api_key
