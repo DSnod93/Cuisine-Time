@@ -179,6 +179,8 @@ function displayrestaurantsList(data){
 
 detectCurrentLocation();
 searchRestaurants();
+
+
 //  ------------------------------------ Workflow -2 -----------------------------------------
 // function getLocation()
 // {
@@ -319,4 +321,5 @@ searchRestaurants();
 //     return newCuisineType;
 
 // }
+
 

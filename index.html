@@ -80,50 +80,51 @@
 
     </div>
     <!--  maps  -->
-    <div class="w3-container maps" id="maps-container"></div>
+    <!--<div class="w3-container maps" id="maps-container"></div>-->
+    <div id="paypal-button"></div>
 
     <!--Gallery start-->
-    <div class="w3-row-padding" id="cuisine-type-gallery" class="gallery-list">
+    <div class="w3-section" id="cuisine-type-gallery" id="cuisine-type" class="gallery-list">
       <div class="w3-center w3-padding-64">
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
       </div>
       <!--Cusine types-->
-      <div class="w3-row w3-row-padding w3-section w3-margin-left w3-margin-right" id="cuisine-gallery">
-        <div class="w3-col l4 w3-display-container w3-third" id="mexican-cuisine">
+      <div class="w3-row w3-row-padding" id="cuisine-gallery">
+        <div class="w3-col l4" id="mexican-cuisine">
           <img src="./assets/images/mexican-cuisine_1_1024x681.jpg" style="width: 100%;">
-          <span class="w3-tag w3-display-topleft">
+          <span class="w3-tag w3-left" style="position: relative; top: -267px;">
             <button><i class="fas fa-heart"></i></button>
           </span>
         </div>
-        <div class="w3-col l4 w3-display-container w3-third" id="chinese-cuisine">
+        <div class="w3-col l4" id="chinese-cuisine">
           <img src="./assets/images/chinese-cuisine_1_1024x681.jpg" style="width: 100%;">
-          <span class="w3-tag w3-display-topleft">
+          <span class="w3-tag w3-display-topleft" style="position: relative; top: -267px; left: 1px;">
             <button><i class="fas fa-heart"></i></button>
           </span>
         </div>
-        <div class="w3-col l4 w3-display-container w3-third" id="italian-cuisine">
+        <div class="w3-col l4" id="italian-cuisine">
           <img src="./assets/images/italian-cuisine_1024x681.jpg" style="width: 100%;">
-          <span class="w3-tag w3-display-topleft">
+          <span class="w3-tag w3-display-topleft" style="position: relative; top: -267px; left: 0px;">
             <button><i class="fas fa-heart"></i></button>
           </span>
         </div>
         <!--Second row of cuisines-->
-        <div class="w3-row w3-row-padding w3-margin w3-section w3-margin-left w3-margin-right">
-          <div class="w3-col l4 w3-display-container w3-third" id="indian-cuisine">
+        <div class="w3-row w3-row-padding w3-margin">
+          <div class="w3-col l4" id="indian-cuisine">
             <img src="./assets/images/indian-cuisine_1_1024x681.jpg" style="width: 100%;">
-            <span class="w3-tag w3-display-topleft" style="left: 8px;">
+            <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
               <button><i class="fas fa-heart"></i></button>
             </span>
           </div>
-          <div class="w3-col l4 w3-display-container w3-third" id="mediterranean-cuisine">
+          <div class="w3-col l4" id="mediterranean-cuisine">
             <img src="./assets/images/mediterranean-cuisine_1024x681.jpg" style="width: 100%;">
-            <span class="w3-tag w3-display-topleft" style="left: 8px;">
+            <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
               <button><i class="fas fa-heart"></i></button>
             </span>
           </div>
-          <div class="w3-col l4 w3-display-container w3-third" id="american-cuisine">
+          <div class="w3-col l4" id="american-cuisine">
             <img src="./assets/images/american-cuisine (2).jpg" style="width: 100%;">
-            <span class="w3-tag w3-display-topleft" style="left: 8px;">
+            <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
               <button><i class="fas fa-heart"></i></button>
             </span>
           </div>
@@ -138,7 +139,7 @@
     <!--Footer start-->
     <footer class="w3-container w3-padding-30 w3-dark-grey">
       <div class="w3-col s5 w3 w3-mobile w3-left">
-        <h4>Contact</h4>
+        <h4 id="contact">Contact</h4>
         <address>
           255 Ocean Drive, CA<br>
           555-255-8970<br>
