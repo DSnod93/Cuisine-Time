@@ -57,6 +57,11 @@ footer a:hover {
     background-color: red;
   }
 
+  button.menu {
+      width: 100%;
+      background-color: Blue;
+  }
+
 
   .w3-display-topleft {
       top: 0;

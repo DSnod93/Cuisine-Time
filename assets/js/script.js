@@ -123,15 +123,13 @@ function displayrestaurantsList(data){
         const restRating_text = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.user_rating.rating_text);
         const restEstablisment = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.establishment[0]);
         const restAddress = $("<p>").addClass("w3-container").text(restaurantsResponselist[i].restaurant.location.address);
-        card.append(cardheader_restName, restRating, restRating_text, restEstablisment,restAddress);
+        card.append(cardheader_restName, restRating, restRating_text, restEstablisment, restAddress);
         $("#restaurants-container").append(card);
-     }
-}
+    };
+};
 
 detectCurrentLocation();
 searchRestaurants();
-
-
 
 
 function saveToLocalStorage(){
