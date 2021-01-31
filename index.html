@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         <a href="#" class="w3-button w3-block w3-hover-red">Home</a>
       </div>
       <div class="w3-col s4 w3-mobile">
-        <a href="#cuisine-type" class="w3-button w3-block w3-hover-red">Cuisine Type</a>
+        <a href="#cuisine-gallery" class="w3-button w3-block w3-hover-red">Cuisine Gallery</a>
       </div>
       <div class="w3-col s4 w3-mobile">
         <a href="#contact" class="w3-button w3-block w3-hover-red">Contact</a>
@@ -36,21 +38,40 @@
   </section>
   <!--Hero end-->
   <!-- archana: added id's for city,cuisine and searchbtn -->
+
+  <!-- <div class="w3-row">
+    <div class="w3-col l5 m6 s4 w3-green w3-center"><p>l3 m6 s4</p></div>
+    <div class="w3-col l5 m3 s4 w3-dark-grey w3-center"><p>l7 m3 s4</p></div>
+    <div class="w3-col l2 m3 s4 w3-red w3-center"><p>l2 m3 s4</p></div>
+  </div> -->
+
+  <div class="w3-container input-container">
+    <div class="w3-col l5 m6 s4 w3-mobile">
+      <input class="w3-input w3-white w3-mobile" id="cityName" placeholder="My Location" disabled>
+      <button id="find-me" class="btn">Use My Location <i class="fas fa-street-view"></i></button>
+    </div>
+    <div class="w3-col l5 m3 s4 w3-mobile">
+      <input class="w3-input" id="searchFood" placeholder="Search for a cuisine" />
+    </div>
+    <div class="w3-col l2 m3 s4 w3-mobile">
+      <button type="submit" id="search-btn" class="searchBtn">Go</button>
+    </div>
+  </div>
   <!--User input for city and cuisine along with button-->
-  <section class="section w3-container w3-center w3-dark-grey w3-padding-16">
+  <!-- <section class="section w3-container w3-center w3-dark-grey w3-padding-16">
     <div class="w3-row w3-row-padding">
       <div class="w3-col s5 w3-mobile">
-        <input class="w3-input" id="cityName" placeholder="Enter city">
+        <input class="w3-input w3-white" id="cityName" placeholder="My Location" disabled>
         <button id="find-me" class="btn">Use My Location <i class="fas fa-street-view"></i></button>
       </div>
       <div class="w3-col s5 w3-mobile">
         <input class="w3-input" id="searchFood" placeholder="Search for a cuisine" />
       </div>
       <div class="w3-col s2 w3-codespan">
-        <button type="submit" id="search-btn" class="searchBtn" onclick="">Go</button>
+        <button type="submit" id="search-btn" class="searchBtn">Go</button>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- if user wants to manually input and select
     <div class="w3-container w3-teal w3-round-xxlarge">
@@ -76,64 +97,129 @@
 
     <!-- archana: added class name to restaurants container and maps container -->
     <!-- display restaurants -->
-    <div class="w3-container restaurants" id="restaurants-container"></div>
-
-    </div>
-    <!--  maps  -->
-    <!--<div class="w3-container maps" id="maps-container"></div>-->
-    <div id="paypal-button"></div>
-
-    <!--Gallery start-->
-    <div class="w3-section" id="cuisine-type-gallery" id="cuisine-type" class="gallery-list">
-      <div class="w3-center w3-padding-64">
-        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
+    <div class="wrapper">
+      <div class="w3-row">
+        <div class="w3-container restaurants" id="restaurants-container"></div>
       </div>
-      <!--Cusine types-->
-      <div class="w3-row w3-row-padding" id="cuisine-gallery">
-        <div class="w3-col l4" id="mexican-cuisine">
-          <img src="./assets/images/mexican-cuisine_1_1024x681.jpg" style="width: 100%;">
-          <span class="w3-tag w3-left" style="position: relative; top: -267px;">
-            <button><i class="fas fa-heart"></i></button>
-          </span>
+      <!--  maps  -->
+      <div class="w3-container maps" id="maps-container"></div>
+    </div>
+    
+
+    <!-- Gallery start-->
+    <!-- <div class="gallery-wrapper">
+      <div class="w3-section" id="cuisine-type-gallery" id="cuisine-type" class="gallery-list">
+        <div class="w3-center w3-padding-64">
+          <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
         </div>
-        <div class="w3-col l4" id="chinese-cuisine">
-          <img src="./assets/images/chinese-cuisine_1_1024x681.jpg" style="width: 100%;">
-          <span class="w3-tag w3-display-topleft" style="position: relative; top: -267px; left: 1px;">
-            <button><i class="fas fa-heart"></i></button>
-          </span>
-        </div>
-        <div class="w3-col l4" id="italian-cuisine">
-          <img src="./assets/images/italian-cuisine_1024x681.jpg" style="width: 100%;">
-          <span class="w3-tag w3-display-topleft" style="position: relative; top: -267px; left: 0px;">
-            <button><i class="fas fa-heart"></i></button>
-          </span>
-        </div>
-        <!--Second row of cuisines-->
-        <div class="w3-row w3-row-padding w3-margin">
-          <div class="w3-col l4" id="indian-cuisine">
-            <img src="./assets/images/indian-cuisine_1_1024x681.jpg" style="width: 100%;">
-            <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
+        Cusine types-->
+        <!-- <div class="w3-row w3-row-padding" id="cuisine-gallery">
+          <div class="w3-col l4" id="mexican-cuisine">
+            <img src="./assets/images/mexican-cuisine_1_1024x681.jpg" style="width: 100%;">
+            <span class="w3-tag w3-left" style="position: relative; top: -267px;">
               <button><i class="fas fa-heart"></i></button>
             </span>
           </div>
-          <div class="w3-col l4" id="mediterranean-cuisine">
-            <img src="./assets/images/mediterranean-cuisine_1024x681.jpg" style="width: 100%;">
-            <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
+          <div class="w3-col l4" id="chinese-cuisine">
+            <img src="./assets/images/chinese-cuisine_1_1024x681.jpg" style="width: 100%;">
+            <span class="w3-tag w3-display-topleft" style="position: relative; top: -267px; left: 1px;">
               <button><i class="fas fa-heart"></i></button>
             </span>
           </div>
-          <div class="w3-col l4" id="american-cuisine">
-            <img src="./assets/images/american-cuisine (2).jpg" style="width: 100%;">
-            <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
+          <div class="w3-col l4" id="italian-cuisine">
+            <img src="./assets/images/italian-cuisine_1024x681.jpg" style="width: 100%;">
+            <span class="w3-tag w3-display-topleft" style="position: relative; top: -267px; left: 0px;">
               <button><i class="fas fa-heart"></i></button>
             </span>
+          </div>
+          Second row of cuisines
+          <div class="w3-row w3-row-padding w3-margin">
+            <div class="w3-col l4" id="indian-cuisine">
+              <img src="./assets/images/indian-cuisine_1_1024x681.jpg" style="width: 100%;">
+              <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
+                <button><i class="fas fa-heart"></i></button>
+              </span>
+            </div>
+            <div class="w3-col l4" id="mediterranean-cuisine">
+              <img src="./assets/images/mediterranean-cuisine_1024x681.jpg" style="width: 100%;">
+              <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
+                <button><i class="fas fa-heart"></i></button>
+              </span>
+            </div>
+            <div class="w3-col l4" id="american-cuisine">
+              <img src="./assets/images/american-cuisine (2).jpg" style="width: 100%;">
+              <span class="w3-tag w3-display-topleft" style="left: 8px; position: relative; top: -255; left: 0px;">
+                <button><i class="fas fa-heart"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+    Gallery end
+
+    Content end -->
+
+    <div class="w3-container w3-teal">
+      <h1 class="w3-center" id="cuisine-gallery">Cuisine Gallery</h1>
+    </div>
+    
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/mexican-cuisine_1_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Mexican</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/chinese-cuisine_1_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Chinese</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/italian-cuisine_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Italian</h5>
           </div>
         </div>
       </div>
     </div>
-    <!--Gallery end-->
-
-    <!--Content end-->
+    
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/american-cuisine (2).jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>American</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/indian-cuisine_1_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Indian</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/mediterranean-cuisine_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Mediterranean</h5>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!--Footer start-->
@@ -159,12 +245,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
       crossorigin="anonymous"></script>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-      <!-- <script
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEzBEuaOLJJZAyG4HvMvXCkRghvR0AMbU&callback=initMap&libraries=&v=weekly"
         defer
       ></script> -->
-    <script src = "./assets/js/script.js"></script>
+    <script src="./assets/js/paypal.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 

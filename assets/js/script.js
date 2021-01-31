@@ -19,6 +19,8 @@ display name, location-address, user_rating- aggregate_rating( rating_text), pho
 */
 
 // GLobal Variables
+
+
 // API Keys
 const zomato_api_key = "5bb1aedf9a190120f2dd61a33a8368b1";
 const maps_api_key = "AIzaSyDEzBEuaOLJJZAyG4HvMvXCkRghvR0AMbU";
@@ -35,10 +37,10 @@ function init(){
 
 function findMe(){
     $("#find-me").click(function(){
-        console.log("button clicked");
+        //console.log("button clicked");
         if(navigator.geolocation)
             navigator.geolocation.getCurrentPosition(function(position){
-                console.log(position);
+                //console.log(position);
                 var lat = position.coords.latitude;
                 var lng = position.coords.longitude;
                 coordinates.push(lat);
@@ -80,13 +82,13 @@ var options = {
 // -------------------------------------------- Workflow -1 -------------------------------------------------
 function detectCurrentLocation(){
     locationBtn.addEventListener('click', function(){
-        console.log("button clicked");
+        //console.log("button clicked");
         getLocation();
     })
 
     function getLocation()
     {
-        console.log("getLocation");
+        //console.log("getLocation");
     // Check whether browser supports Geolocation API or not
     if (navigator.geolocation) { // Supported
         // To add PositionOptions
@@ -109,8 +111,8 @@ function detectCurrentLocation(){
     }
 
     function getData_City(coordinates){
-        console.log(coordinates[0]);
-        console.log(coordinates[1]);
+        // console.log(coordinates[0]);
+        // console.log(coordinates[1]);
         var apiUrl = 'https://developers.zomato.com/api/v2.1/cities?lat=' +coordinates[0] +'&lon=' +coordinates[1];
         // make a request to the url
 
@@ -119,7 +121,7 @@ function detectCurrentLocation(){
             "user-key": zomato_api_key
         }})
         .then(function(response){
-            console.log(response);
+            //console.log(response);
             return response.json();
         })
         .then(function(data){
@@ -133,7 +135,7 @@ function detectCurrentLocation(){
 }
 
 function searchRestaurants(){
-    console.log("entered searchRes");
+    //console.log("entered searchRes");
     //cityName_userinput = document.getElementById("cityName");
     //console.log(cityName_userinput.value);
     
@@ -141,6 +143,7 @@ function searchRestaurants(){
     var searchBtnEl = document.getElementById("search-btn");
     var userInput_searchFoodEl = document.getElementById("searchFood");
     searchBtnEl.addEventListener("click", function(){
+        saveToLocalStorage();
         getData_Restaurants(cityId, userInput_searchFoodEl.value);
         userInput_searchFoodEl.value = '';
     });
@@ -153,12 +156,13 @@ function getData_Restaurants(cityId, userInput_searchFood){
             "user-key": zomato_api_key
         }})
         .then(function(response){
-            console.log(response);
             return response.json();
         })
         .then(function(data){
-            console.log(data);
+            // console.log('restaurantData');
+            // console.log(data);
             displayrestaurantsList(data);
+            displayMap(data);
         });
 };
 
@@ -180,6 +184,23 @@ function displayrestaurantsList(data){
 detectCurrentLocation();
 searchRestaurants();
 
+
+
+
+function saveToLocalStorage(){
+    console.log("entered saved localstorage");
+    var userInput_searchFoodEl = document.getElementById("searchFood");
+    //var favArray={};
+    //console.log({favArray});
+    var bookmarkedItem = userInput_searchFoodEl.value;
+    //favArray.push(bookmarkedItem.value);
+    console.log(bookmarkedItem);
+    localStorage.setItem('bookmarkedItem', JSON.stringify(bookmarkedItem));
+
+    var storedItem = JSON.parse(localStorage.getItem('bookmarkedItem'));
+    userInput_searchFoodEl.setAttribute('placeholder', storedItem);
+    console.log(storedItem);
+};
 
 //  ------------------------------------ Workflow -2 -----------------------------------------
 // function getLocation()
@@ -321,5 +342,7 @@ searchRestaurants();
 //     return newCuisineType;
 
 // }
+
+
 
 
