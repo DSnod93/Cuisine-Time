@@ -9,9 +9,9 @@ Get the restaurants lists from the zomato search api with the following inputs i
 display name, location-address, user_rating- aggregate_rating( rating_text) sorted by rating in descding order from the response
 */
 
+
+
 // GLobal Variables
-
-
 // API Keys
 const zomato_api_key = "5bb1aedf9a190120f2dd61a33a8368b1";
 var coordinates = [];
@@ -25,35 +25,9 @@ var options = {
     timeout: 10000,
     maximumAge: 0
 };
-
-// $(document).ready(function(){
-//     init();
-
-// function init(){
-//     // detect current location
-//     findMe(); 
-// }
-
-// function findMe(){
-//     $("#find-me").click(function(){
-//         console.log("button clicked");
-//         if(navigator.geolocation)
-//             navigator.geolocation.getCurrentPosition(function(position){
-//                 console.log(position);
-//                 var lat = position.coords.latitude;
-//                 var lng = position.coords.longitude;
-//                 coordinates.push(lat);
-//                 coordinates.push(lng);
-//                 //console.log(coordinates); 
-//                 return coordinates;
-//     });
-//     else    
-//         console.log("geolocation is not supported");      
-//     });
-// };
-// });
-
-// -------------------------------------------- Workflow -1 -------------------------------------------------
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+// uses GeoLocation API to detect and populate current location of the user
 function detectCurrentLocation(){
     locationBtn.addEventListener('click', function(){
         //console.log("button clicked");
@@ -69,7 +43,7 @@ function detectCurrentLocation(){
     navigator.geolocation.getCurrentPosition(getPosition,error,options);
     } else 
     { // Not supported
-    alert("Oops! This browser does not support HTML Geolocation.");
+        alert("Oops! This browser does not support HTML Geolocation.");
     }
     }
 
