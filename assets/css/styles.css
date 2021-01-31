@@ -31,6 +31,13 @@ footer a:hover {
     width: 100%;
 }
   
+.input-location {
+    padding: inherit;
+}
+
+.input-cuisine {
+    margin: 20px 0;
+}
   
 
   div.w3-col.s2.w3-codespan {
@@ -44,7 +51,12 @@ footer a:hover {
       margin: 20px 30px;
       background-color: grey;
       padding: 20px;
+      padding-bottom: 0px;
       margin: auto;
+  }
+
+  .go-btn {
+      margin: 20px 0;
   }
   
 
@@ -70,20 +82,22 @@ footer a:hover {
   }
 
   /*heart icon for images start*/
-  .fa-heart {
+  /* .fa-heart {
       font-size: 22px;
   }
 
   .fa-heart:hover {
       color: red;
-  }
+  } */
   /*heart icon for images end*/
 
-
+div#restaurants-container.w3-container.restaurants {
+    width: 108%;
+}
   /*containers for restaurants and maps*/
-  .w3-container.restaurants {
+  /* .w3-container.restaurants {
       width: 100%;
-  }
+  } */
 
   .w3-container.maps {
     width: 60%;
