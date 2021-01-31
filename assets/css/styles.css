@@ -26,7 +26,10 @@ footer a:hover {
       margin: 0;
   }
 
-
+.wrapper {
+    display: flex;
+    width: 100%;
+}
   
   
 
@@ -34,11 +37,21 @@ footer a:hover {
       width: 100;
       padding: 2px;
   }
+
+  
+
+  .input-container {
+      margin: 20px 30px;
+      background-color: grey;
+      padding: 20px;
+      margin: auto;
+  }
   
 
   button.searchBtn {
     width: 100%;
-    padding: 0;
+    padding: 8px;
+    margin: -2px 0;
     color: white;
     background-color: red;
   }
@@ -69,7 +82,7 @@ footer a:hover {
 
   /*containers for restaurants and maps*/
   .w3-container.restaurants {
-      width: 40%;
+      width: 100%;
   }
 
   .w3-container.maps {
@@ -84,7 +97,7 @@ footer a:hover {
     top: -38px;
     left: -1px;
     padding: 5px;
-    border: solid  red;
+    /*border: solid  red;*/
     margin: 0 auto;
 }
 
