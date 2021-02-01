@@ -24,8 +24,8 @@ To use <Cuisine-Time>, follow these steps:
     * Location Address with hyper link of the restaurant url.
 
 ## Screenshot
-![App at first glance](./assests/images/screenshot1.png)
-![Search Results](./assests/images/screenshot2.png)
+![App at first glance](./assests/images/Screenshot_1.jpg)
+![Search Results](./assests/images/Screenshot_2.jpg)
 
 ## Deployment link
 [Deployed here](https://dsnod93.github.io/Cuisine-Time/)
