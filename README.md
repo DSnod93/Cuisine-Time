@@ -47,9 +47,9 @@ To use follow these steps:
     * [W3.CSS](https://www.w3schools.com/w3css/default.asp)
 
 * Third-party APIs
-    * [GeoLocation API](https://developers.google.com/maps/documentation/geolocation/overview)
-    * [Zomato API](https://developers.zomato.com/documentation)
-    * [Here API](https://developer.here.com/documentation/routing-api/8.20.0/api-reference-swagger.html)
+    * [GeoLocation API]
+    * [Zomato API]
+    * [Here API]
 
 ## Things to note about the app
 
