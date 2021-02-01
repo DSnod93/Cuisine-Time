@@ -2,10 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  
-  footer {
+footer {
     width: 100%;
     padding: 40px 35px;
 }
@@ -18,19 +17,19 @@ footer a:hover {
     color: red;
 }
 
-  .hero {
-      height: 300px;
-      background-image: url(../images/cuisine.jpg);
-      background-size: cover;
-      padding: 0;
-      margin: 0;
-  }
+.hero {
+    height: 300px;
+    background-image: url(../images/cuisine.jpg);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
 
 .wrapper {
     display: flex;
     width: 100%;
 }
-  
+
 .input-location {
     padding: inherit;
 }
@@ -38,132 +37,65 @@ footer a:hover {
 .input-cuisine {
     margin: 20px 0;
 }
-  
 
-  div.w3-col.s2.w3-codespan {
-      width: 100;
-      padding: 2px;
-  }
+div.w3-col.s2.w3-codespan {
+    width: 100;
+    padding: 2px;
+}
 
-  
+.input-container {
+    margin: 20px 30px;
+    background-color: grey;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin: auto;
+}
 
-  .input-container {
-      margin: 20px 30px;
-      background-color: grey;
-      padding: 20px;
-      padding-bottom: 0px;
-      margin: auto;
-  }
+.go-btn {
+    margin: 20px 0;
+}
 
-  .go-btn {
-      margin: 20px 0;
-  }
-  
-
-  button.searchBtn {
+button.searchBtn {
     width: 100%;
     padding: 8px;
     margin: -2px 0;
     color: white;
     background-color: red;
-  }
+}
 
+.w3-display-topleft {
+    top: 0;
+    left: 8px;
+    position: absolute;
+}
 
-  .w3-display-topleft {
-      top: 0;
-      left: 8px;
-      position: absolute;
-  }
-
-  .w3-tag {
-      padding-left: 0px;
-      padding-right: 0px;
-      background-color: black;
-  }
-
-  /*heart icon for images start*/
-  /* .fa-heart {
-      font-size: 22px;
-  }
-
-  .fa-heart:hover {
-      color: red;
-  } */
-  /*heart icon for images end*/
+.w3-tag {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: black;
+}
 
 div#restaurants-container.w3-container.restaurants {
     width: 108%;
 }
-  /*containers for restaurants and maps*/
-  /* .w3-container.restaurants {
-      width: 100%;
-  } */
 
-  .w3-container.maps {
+.w3-container.maps {
     width: 60%;
 }
-  /*containers for restaurants and maps end*/
 
-
-    button#find-me.btn {
+button#find-me.btn {
     float: right;
     position: relative;
     top: -38px;
     left: -1px;
     padding: 5px;
-    /*border: solid  red;*/
     margin: 0 auto;
 }
 
-
-
-
-
-
-  /* archana: added styling to restaurant container */
-.w3-container.restaurants{
+.w3-container.restaurants {
     width: 40%;
 }
 
-  /* archana: added styling to maps container */
-.w3-container.maps{
+.w3-container.maps {
     width: 60%;
 }
-
-
-  /*#mexican-cuisine {
-      height: 200px;
-      background-image: url(../images/mexican-cuisine.jpg);
-      background-size: cover;
-  }
-
-  #chinese-cuisine {
-      height: 200px;
-      background-image: url(../images/chinese-cuisine.jpg);
-      background-size: cover;
-  }
-
-  #italian-cuisine {
-      height: 200px;
-      background-image: url(../images/italian-cuisine.jpg);
-      background-size: cover;
-  }
-
-  #indian-cuisine {
-      height: 200px;
-      background-image: url(../images/indian-cuisine.jpg);
-      background-size: cover;
-  }
-
-  #mediterranean-cuisine {
-    height: 200px;
-    background-image: url(../images/mediterranean-cuisine.jpg);
-    background-size: cover;
-    background-position: 50%;
-  }
-
-  #american-cuisine {
-    height: 200px;
-    background-image: url(../images/american-cuisine.jpg);
-    background-size: cover;
-}*/
