@@ -25,7 +25,10 @@ To use follow these steps:
     * Location Address 
 
 ## Screenshots
+* App at first glance
 ![App at first glance](./assets/images/Screenshot_1.jpg)
+
+* Search results
 ![Search Results](./assets/images/Screenshot_2.jpg)
 
 ## Deployment link
