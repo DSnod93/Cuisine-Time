@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --primary: gray;
+    --secondary: red;
+    --tertiary: black;
   }
 
   
@@ -15,16 +18,16 @@ footer div {
 }
 
 footer a:hover {
-    color: red;
+    color: var(--secondary);
 }
 
-  .hero {
+.hero {
       height: 300px;
       background-image: url(../images/cuisine.jpg);
       background-size: cover;
       padding: 0;
       margin: 0;
-  }
+}
 
 .wrapper {
     display: flex;
@@ -40,16 +43,14 @@ footer a:hover {
     margin: 20px 0;
 }
 
-  
 
-  div.w3-col.s2.w3-codespan {
+div.w3-col.s2.w3-codespan {
       width: 100;
       padding: 2px;
-  }
+}
 
-  
 
-  .input-container {
+.input-container {
       margin: 20px 30px;
       background-color: grey;
       padding: 20px;
@@ -57,62 +58,42 @@ footer a:hover {
       margin: auto;
   }
 
-  .go-btn {
+.go-btn {
       margin: 20px 0;
-  }
+     }
   
 
-  button.searchBtn {
+button.searchBtn {
     width: 100%;
     padding: 8px;
     margin: -2px 0;
     color: white;
-    background-color: red;
-  }
-
-  button.menu {
-      width: 100%;
-      background-color: Blue;
+    background-color: var(--secondary);
   }
 
 
-  .w3-display-topleft {
+.w3-display-topleft {
       top: 0;
       left: 8px;
       position: absolute;
   }
 
-  .w3-tag {
+.w3-tag {
       padding-left: 0px;
       padding-right: 0px;
-      background-color: black;
+      background-color: var(--tertiary);
   }
-
-  /*heart icon for images start*/
-  /* .fa-heart {
-      font-size: 22px;
-  }
-
-  .fa-heart:hover {
-      color: red;
-  } */
-  /*heart icon for images end*/
 
 div#restaurants-container.w3-container.restaurants {
     width: 108%;
 }
-  /*containers for restaurants and maps*/
-  /* .w3-container.restaurants {
-      width: 100%;
-  } */
 
-  .w3-container.maps {
+.w3-container.maps {
     width: 60%;
 }
-  /*containers for restaurants and maps end*/
 
 
-    button#find-me.btn {
+button#find-me.btn {
     float: right;
     position: relative;
     top: -38px;
