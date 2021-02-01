@@ -1,80 +1,159 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cusine Time</title>
-    <script src="https://kit.fontawesome.com/80833262c1.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cusine Time</title>
+  <script src="https://kit.fontawesome.com/80833262c1.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
 </head>
-
 <body>
 
-    <!--Nav start-->
-    <div>
-        <div class="w3-row w3-large w3-dark-grey">
-          <div class="w3-col s4">
-            <a href="#" class="w3-button w3-block">Home</a>
-          </div>
-          <div class="w3-col s4">
-            <a href="#menu" class="w3-button w3-block">Menu</a>
-          </div>
-          <div class="w3-col s4">
-            <a href="#contact" class="w3-button w3-block">Contact</a>
+  <!--Nav start-->
+  <div class="w3-bar w3-mobile w3-padding-16 w3-dark-grey">
+    <span class="w3-center">
+      <div class="w3-col s4 w3-mobile">
+        <a href="#" class="w3-button w3-block w3-hover-red">Home</a>
+      </div>
+      <div class="w3-col s4 w3-mobile">
+        <a href="#cuisine-gallery" class="w3-button w3-block w3-hover-red">Cuisine Gallery</a>
+      </div>
+      <div class="w3-col s4 w3-mobile">
+        <a href="#contact" class="w3-button w3-block w3-hover-red">Contact</a>
+      </div>
+    </span>
+  </div>
+  <!--Nav end-->
+
+  <!--Hero start-->
+  <section>
+    <div class="hero">
+    </div>
+  </section>
+  <!--Hero end-->
+
+
+
+  <div class="w3-container input-container">
+    <div class="w3-col l5 m6 s4 w3-mobile input-location">
+      <input class="w3-input w3-white w3-mobile" id="cityName" placeholder="My Location" disabled>
+      <button id="find-me" class="btn">Use My Location <i class="fas fa-street-view"></i></button>
+    </div>
+    <div class="w3-col l5 m3 s4 w3-mobile input-cuisine">
+      <input class="w3-input" id="searchFood" placeholder="Search for a cuisine" />
+    </div>
+    <div class="w3-col l2 m3 s4 w3-mobile go-btn">
+      <button type="submit" id="search-btn" class="searchBtn">Go</button>
+    </div>
+  </div>
+
+  <!--Content start-->
+  <main>
+    <!-- display restaurants -->
+    <div class="wrapper">
+      <div class="w3-row">
+        <div class="w3-container restaurants" id="restaurants-container"></div>
+      </div>
+      <!--  maps  -->
+      <div class="w3-container maps" id="maps-container"></div>
+    </div>
+
+    <div class="w3-container w3-teal">
+      <h1 class="w3-center" id="cuisine-gallery">Cuisine Gallery</h1>
+    </div>
+
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/mexican-cuisine_1_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Mexican</h5>
           </div>
         </div>
       </div>
-    <!--Nav end-->
 
-
-    <!--Hero start-->
-    <section>
-        <h1>Cusine Time</h1>
-    </section>
-    <!--Hero end-->
-
-    <!--Content start-->
-    <main>
-        <div>
-            <label for="cusine">Enter City:</label>
-            <input type="text" id="cusine" name="cusine">
-
-            <select>
-                <option>Mexican</option>
-                <option>Chinese</option>
-                <option>Italian</option>
-                <option>Thai</option>
-                <option>Indian</option>
-                <option>Canadian</option>
-
-            </select>
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/chinese-cuisine_1_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Chinese</h5>
+          </div>
         </div>
+      </div>
 
-        <div class="w3-row-padding" id="gallery">
-            <div class="w3-center w3-padding-64">
-              <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gallery</span>
-            </div>
-        
-    </main>
-    <!--Content end-->
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/italian-cuisine_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Italian</h5>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/american-cuisine (2).jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>American</h5>
+          </div>
+        </div>
+      </div>
 
-    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-        <h4>Contact</h4>
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/indian-cuisine_1_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Indian</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="w3-card">
+          <img src="./assets/images/mediterranean-cuisine_1024x681.jpg" style="width:100%">
+          <div class="w3-container">
+            <h5>Mediterranean</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cuisine Gallery ends -->
+
+    <!--Footer start-->
+    <footer class="w3-container w3-padding-30 w3-dark-grey">
+      <div class="w3-col s5 w3 w3-mobile w3-left">
+        <h4 id="contact">Contact</h4>
         <address>
-            255 Ocean Drive, CA<br>
-            555-255-8970<br>
-            <a href="mailto:webmaster@example.com">cusinetime@foodies.org</a>.<br>
+          255 Ocean Drive, CA<br>
+          555-255-8970<br>
+          <a href="mailto:webmaster@example.com">cuisinetime@foodies.org</a>.<br>
         </address>
-        <div class="w3-xlarge w3-section">
-          <i class="fa fa-facebook-official w3-hover-opacity"></i>
-          <i class="fa fa-instagram w3-hover-opacity"></i>
-          <i class="fa fa-snapchat w3-hover-opacity"></i>
-          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        </div>
-      </footer>
+      </div>
+      <div class="w3-xlarge w3-center w3-col s12">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      </div>
+    </footer>
+    <!--Footer end-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="./assets/js/paypal.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </main>
+  <!--Content end-->
 
 </body>
-
 </html>

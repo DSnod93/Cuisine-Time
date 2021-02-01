@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    width: 100%;
+    padding: 40px 35px;
+}
+
+footer div {
+    line-height: 2;
+}
+
+footer a:hover {
+    color: var(--secondary);
+}
+
+.hero {
+    height: 300px;
+    background-image: url(../images/cuisine.jpg);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.input-location {
+    padding: inherit;
+}
+
+.input-cuisine {
+    margin: 20px 0;
+}
+
+div.w3-col.s2.w3-codespan {
+    width: 100;
+    padding: 2px;
+}
+
+.input-container {
+    margin: 20px 30px;
+    background-color: grey;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin: auto;
+}
+
+.go-btn {
+    margin: 20px 0;
+}
+
+button.searchBtn {
+    width: 100%;
+    padding: 8px;
+    margin: -2px 0;
+    color: white;
+    background-color: red;
+}
+
+.w3-display-topleft {
+    top: 0;
+    left: 8px;
+    position: absolute;
+}
+
+.w3-tag {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: black;
+}
+
+div#restaurants-container.w3-container.restaurants {
+    width: 108%;
+}
+
+.w3-container.maps {
+    width: 60%;
+}
+
+button#find-me.btn {
+    float: right;
+    position: relative;
+    top: -38px;
+    left: -1px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.w3-container.restaurants {
+    width: 40%;
+}
+
+.w3-container.maps {
+    width: 60%;
+}
