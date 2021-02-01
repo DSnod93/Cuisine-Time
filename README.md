@@ -25,8 +25,8 @@ To use follow these steps:
     * Location Address 
 
 ## Screenshots
-![App at first glance](./assests/images/Screenshot_1.jpg)
-![Search Results](./assests/images/Screenshot_2.jpg)
+![App at first glance](./assets/images/Screenshot_1.jpg)
+![Search Results](./assets/images/Screenshot_2.jpg)
 
 ## Deployment link
 [Deployed here](https://dsnod93.github.io/Cuisine-Time/)
@@ -50,16 +50,16 @@ To use follow these steps:
 
 ## Things to note about the app
 
-    * App is currently fetching the results from the current location. 
-    * Maps loaded on the page is currently static and is displaying the area around the location coordinates
-    * If user blocks the current location, no location is populated in the text box. User is still able to use the app to search for restaurants by cuisine type which will give him/her random search results.
+* App is currently fetching the results from the current location. 
+* Maps loaded on the page is currently static and is displaying the area around the location coordinates
+* If user blocks the current location, no location is populated in the text box. User is still able to use the app to search for restaurants by cuisine type which will give him/her random search results.
 
 ## Scope of improvement
 
-    * User should be allowed to search for the city and then fetch the search results as per the city and the cuisine type.
-    * Maps should be loaded as per the search result.
-    * Maps has to me made interactive.
-    * Online ordering is another big feature coming in the future versions.
+* User should be allowed to search for the city and then fetch the search results as per the city and the cuisine type.
+* Maps should be loaded as per the search result.
+* Maps has to me made interactive.
+* Online ordering is another big feature coming in the future versions.
 
 
 ## Developed by
