@@ -1,17 +1,18 @@
-# Cuisine-Time
+# Cuisine-Time 
+### Version 1.0
 
-<Cuisine-Time> is a web application that allows any user to search for restaurants in his/her location based on user's cuisine of choice sorted by highest rating. User will have an option of checking out each restaurant for more details by clicking on the location address link.
+Cuisine-Time is a web application that allows any user to search for restaurants in his/her location based on user's cuisine of choice sorted by highest rating. 
 
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
-* You have installed the latest version of the browser - Google Chrome or Mozilla Firefox.
+* You have to have the latest version of the browser - Google Chrome or Mozilla Firefox.
 
 
-## Using <Cuisine-Time>
+## Usage
 
-To use <Cuisine-Time>, follow these steps:
+To use follow these steps:
 
 * Load the app on the browser of your choice
 * Click on the <Use My Location> button to allow enabling location services. Watch for the location populated in the text box.
@@ -21,17 +22,19 @@ To use <Cuisine-Time>, follow these steps:
     * Rating
     * Rating_text
     * Establishment Type
-    * Location Address with hyper link of the restaurant url.
+    * Location Address 
 
-## Screenshot
-![App at first glance](./assests/images/screenshot1.png)
-![Search Results](./assests/images/screenshot2.png)
+## Screenshots
+* App at first glance
+![App at first glance](./assets/images/Screenshot_1.jpg)
+
+* Search results
+![Search Results](./assets/images/Screenshot_2.jpg)
 
 ## Deployment link
 [Deployed here](https://dsnod93.github.io/Cuisine-Time/)
 
 ## Technologies used
-
 * Languages
     * HTML
     * CSS
@@ -48,10 +51,21 @@ To use <Cuisine-Time>, follow these steps:
     * [Zomato API](https://developers.zomato.com/documentation)
     * [Here API](https://developer.here.com/documentation/routing-api/8.20.0/api-reference-swagger.html)
 
+## Things to note about the app
 
-## Contributors
+* App is currently fetching the results from the current location. 
+* Maps loaded on the page is currently static and is displaying the area around the location coordinates
+* If user blocks the current location, no location is populated in the text box. User is still able to use the app to search for restaurants by cuisine type which will give him/her random search results.
 
-Thanks to the following people who have contributed to this project:
+## Scope of improvement
+
+* User should be allowed to search for the city and then fetch the search results as per the city and the cuisine type.
+* Maps should be loaded as per the search result.
+* Maps has to me made interactive.
+* Online ordering is another big feature coming in the future versions.
+
+
+## Developed by
 
 * [@dsnod93](https://github.com/dsnod93) 🔬 📖 👀 🤔 💻 🐛 🎨
 * [@archana-nagaraj](https://github.com/archana-nagaraj) 🔬 📖 👀 🤔 💻 🐛 🎨
