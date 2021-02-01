@@ -62,9 +62,7 @@ To use follow these steps:
     * Online ordering is another big feature coming in the future versions.
 
 
-## Contributors
-
-Thanks to the following people who have contributed to this project:
+## Developed by
 
 * [@dsnod93](https://github.com/dsnod93) 🔬 📖 👀 🤔 💻 🐛 🎨
 * [@archana-nagaraj](https://github.com/archana-nagaraj) 🔬 📖 👀 🤔 💻 🐛 🎨
