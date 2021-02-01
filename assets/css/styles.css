@@ -14,7 +14,7 @@ footer div {
 }
 
 footer a:hover {
-    color: red;
+    color: var(--secondary);
 }
 
 .hero {

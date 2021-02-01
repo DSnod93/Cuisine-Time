@@ -1,21 +1,14 @@
+// Fetch the static map and display on the page using Here API
+
+
 function displayMap(data) {
-var lat = data.restaurants[0]['restaurant']['location']['latitude'];
-var lon = data.restaurants[0]['restaurant']['location']['longitude'];
-var apiKey = 'c5VmyaK5h93ma5QXUQ4mTtLsOWLdZK9Nqtugji5W8k4';
- console.log(`lat:${lat}`);
- console.log(`lon:${lon}`);
-console.log(data);
-//function initMap() {
-var platform = new H.service.Platform({
-    //'app_id': 'HeTdK9OpWo0W8nlxtHka',
-    'apikey': apiKey,
-    //'bearer': true
-
-    
-  });
+    var lat = data.restaurants[0]['restaurant']['location']['latitude'];
+    var lon = data.restaurants[0]['restaurant']['location']['longitude'];
+    var apiKey = 'c5VmyaK5h93ma5QXUQ4mTtLsOWLdZK9Nqtugji5W8k4';
+    var platform = new H.service.Platform({
+     'apikey': apiKey
+     });
   
-
-
   // Obtain the default map types from the platform object:
 var defaultLayers = platform.createDefaultLayers();
 
@@ -28,17 +21,3 @@ var map = new H.Map(
       center: { lat: lat, lng: lon }
     });
 }
-
-    
-// initMap();
-
-// var routingParameters = {
-//     'routingMode': 'fast',
-//     'transportMode': 'car',
-//     // The start point of the route:
-//     'origin': '',
-//     //The end point of the route:
-//     'destination': '',
-//     // Include the route shape in the response
-//     'return': 'polyline'
-// };
